@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adnan AlShubbar | Real-Time Technical Advisor & Engineer</title>
+    <style>
+        :root {
+            --bg-color: #f4f6f9;
+            --text-color: #2c3e50;
+            --accent-color: #0056b3; 
+            --accent-secondary: #17a2b8;
+            --card-bg: #ffffff;
+            --border-color: #e9ecef;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 0;
+        }
+
+        /* Hero Header Section */
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        header p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 25px auto;
+            font-weight: 300;
+        }
+
+        .social-links a {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            padding: 10px 24px;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: background 0.3s ease;
+            display: inline-block;
+        }
+
+        .social-links a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Layout */
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: var(--card-bg);
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+        }
+
+        section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            color: #1e3c72;
+            border-bottom: 3px solid var(--bg-color);
+            padding-bottom: 10px;
+        }
+
+        /* Profile/Summary */
+        .intro-text {
+            font-size: 1.1rem;
+            color: #4a5568;
+        }
+
+        /* Experience & Projects */
+        .block-item {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .block-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .block-title {
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: #2d3748;
+        }
+
+        .block-subtitle {
+            font-size: 1rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-top: 2px;
+        }
+
+        .block-meta {
+            font-size: 0.9rem;
+            color: #718096;
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+
+        .block-item p {
+            color: #4a5568;
+            font-size: 1rem;
+        }
+
+        /* Skills Grid */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-badge {
+            background-color: #eef2f7;
+            color: #2a5298;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            font-size: 0.9rem;
+            color: #a0aec0;
+            background-color: #1a202c;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Adnan AlShubbar</h1>
+        <p>Real-Time Technical Advisor | Distributed Systems & Computer Engineer</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com" target="_blank">Connect on LinkedIn</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Professional Summary -->
+        <section id="about">
+            <h2>Professional Profile</h2>
+            <p class="intro-text">
+                Expert Technical Advisor specializing in WITSML real-time drilling data transmission, visualization, and distributed systems engineering. Proven track record in orchestrating large-scale cloud-native adaptations and infrastructure upgrades to meet stringent service compliance guidelines. Adept at driving data-driven decisions and KPIs within major oilfield environments through robust cross-vendor coordination and scalable architecture deployment.
+            </p>
+        </section>
+
+        <!-- Selected Projects -->
+        <section id="projects">
+            <h2>Key Deployments & Projects</h2>
+            
+            <div class="block-item">
+                <div class="block-title">CORVA Deployment in Saudi Arabia</div>
+                <div class="block-meta">Deployment Leader & Technical Lead | 2024</div>
+                <p>Successfully adapted and deployed CORVA, a cloud-native real-time system, to work within an on-premise infrastructure layout. Provided comprehensive front-end and back-end troubleshooting to deliver real-time data visualization, optimization KPIs, and advanced engineering capabilities directly to ongoing drilling operations.</p>
+            </div>
+
+            <div class="block-item">
+                <div class="block-title">Drilling Data Acquisition System Upgrade</div>
+                <div class="block-meta">Baker Hughes | 2022</div>
+                <p>Led the strategic localization of an advanced data acquisition system designed to satisfy precise operator metrics. Analyzed operational criteria, collaborated tightly with development engineering teams, executed compliance testing, and executed configuration updates.</p>
+            </div>
+
+            <div class="block-item">
+                <div class="block-title">Saudi Aramco RTDTVS Deployment</div>
+                <div class="block-meta">Baker Hughes | 2020</div>
+                <p>Guided multiple facets of the initial deployment phase for real-time data transmission systems (RTDTVS). Established custom software mapping configurations, evaluated service company compatibility matrices, and directly aligned operations with regional enterprise data parameters.</p>
+            </div>
+        </section>
+
+        <!-- Professional Experience -->
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            
+            <div class="block-item">
+                <div class="block-title">Real-Time Technical Advisor</div>
+                <div class="block-subtitle">Baker Hughes · Dhahran, Saudi Arabia</div>
+                <div class="block-meta">August 2020 – Present</div>
+                <p>Manage standard WITSML data streaming pipelines and analytics platforms. Oversee mapping schema customization, pipeline workflow implementations, and multi-party vendor management to actively resolve streaming bugs or telemetry edge-cases. Enable deep operational value by mapping raw downhole streaming metrics to real-time drilling efficiency indicators.</p>
+            </div>
+
+            <div class="block-item">
+                <div class="block-title">RTOC Support Team Leader</div>
+                <div class="block-subtitle">Petrolink · Dhahran, Saudi Arabia</div>
+                <div class="block-meta">January 2014 – July 2020</div>
+                <p>Directed the Real-Time Operations Center technical support group. Spearheaded data continuity audits and telemetry streaming validation for enterprise drilling platforms. Championed team training, drafted emergency operational recovery playbooks, and standardized internal diagnostic reporting models.</p>
+            </div>
+
+            <div class="block-item">
+                <div class="block-title">IT Help Desk System Analyst</div>
+                <div class="block-subtitle">MENA Business Services · Khobar, Saudi Arabia</div>
+                <div class="block-meta">June 2012 – January 2014</div>
+                <p>Managed technical response workflows, systematically tracking application failures and infrastructure bugs. Built comprehensive escalations and conducted rapid systems triage to maintain high uptime for corporate end-users.</p>
+            </div>
+
+            <div class="block-item">
+                <div class="block-title">Information Protection Division COOP Trainee</div>
+                <div class="block-subtitle">Saudi Aramco · Dhahran, Saudi Arabia</div>
+                <div class="block-meta">July 2007 – January 2008</div>
+                <p>Executed structural risk assessments and verified infrastructure security controls through deliberate system penetration testing. Drafted corporate awareness materials designed to harden user behaviors against targeted digital threats.</p>
+            </div>
+        </section>
+
+        <!-- Technical Expertise -->
+        <section id="skills">
+            <h2>Skills & Expertise</h2>
+            <div class="skills-container">
+                <span class="skill-badge">WITSML Data Protocol</span>
+                <span class="skill-badge">Real-Time Data Visualization</span>
+                <span class="skill-badge">Cloud-Native & In-Premise Architectures</span>
+                <span class="skill-badge">Drilling Operations Analytics</span>
+                <span class="skill-badge">Distributed Systems & Networks</span>
+                <span class="skill-badge">Java Programming</span>
+                <span class="skill-badge">Team Leadership & Operations Management</span>
+                <span class="skill-badge">Penetration Testing & Security Risk Assessment</span>
+                <span class="skill-badge">Cross-Functional Stakeholder Management</span>
+            </div>
+        </section>
+
+        <!-- Education Background -->
+        <section id="education">
+            <h2>Education</h2>
+            
+            <div class="block-item">
+                <div class="block-title">MSc in Distributed Systems and Networks</div>
+                <div class="block-subtitle">University of Kent · United Kingdom</div>
+                <div class="block-meta">Graduated June 2011</div>
+                <p>Concentrations in network protocol design, advanced Java development, information security controls, and distributed computing patterns. <strong>Master's Thesis:</strong> Functional programming optimizations utilizing speculative parallelism to accelerate computational throughput past data dependencies.</p>
+            </div>
+
+            <div class="block-item">
+                <div class="block-title">BSc in Computer Engineering (3rd Honor)</div>
+                <div class="block-subtitle">King Fahd University of Petroleum & Minerals · Dhahran, Saudi Arabia</div>
+                <div class="block-meta">Graduated June 2008</div>
+                <p>Academic foundation focused on modular computer architectures, foundational networking schemas, software development paradigms, and hardware systems logic.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Adnan AlShubbar. Portfolio powered by clean code.</p>
+    </footer>
+
+</body>
+</html>
