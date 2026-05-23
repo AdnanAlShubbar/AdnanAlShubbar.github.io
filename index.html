@@ -1,33 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
-  <title>Adnan AlShubbar | Data Engineer</title>
+  <title>Adnan AlShubbar | Real Time Technical Advisor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Adnan AlShubbar – Real Time Technical Advisor at Baker Hughes, specializing in distributed systems, real-time data, and operational support." />
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
   <style>
     :root {
+      --transition: 200ms ease;
+    }
+
+    /* DARK THEME */
+    :root[data-theme="dark"] {
       --bg: #0a0d14;
       --bg-card: #111622;
       --text: #e5e7eb;
       --muted: #9ca3af;
       --accent: #38bdf8;
       --border: rgba(255,255,255,0.08);
-      --radius: 18px;
       --shadow: 0 20px 40px rgba(0,0,0,0.45);
-      --transition: 200ms ease;
+    }
+
+    /* LIGHT THEME */
+    :root[data-theme="light"] {
+      --bg: #f5f7fa;
+      --bg-card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --accent: #0ea5e9;
+      --border: rgba(0,0,0,0.1);
+      --shadow: 0 10px 25px rgba(0,0,0,0.08);
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
       font-family: "Inter", sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.6;
       padding: 40px 20px;
+      transition: background var(--transition), color var(--transition);
     }
 
     main {
@@ -50,6 +65,23 @@
     }
 
     nav a:hover { color: var(--accent); }
+
+    /* Toggle Button */
+    .toggle-btn {
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      color: var(--text);
+      cursor: pointer;
+      font-size: 13px;
+      transition: var(--transition);
+    }
+
+    .toggle-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
 
     .hero h1 {
       font-size: 42px;
@@ -75,7 +107,7 @@
       background: var(--bg-card);
       border: 1px solid var(--border);
       padding: 20px;
-      border-radius: var(--radius);
+      border-radius: 18px;
       box-shadow: var(--shadow);
       margin-bottom: 16px;
       transition: var(--transition);
@@ -105,6 +137,10 @@
       transition: var(--transition);
     }
 
+    :root[data-theme="light"] .skill {
+      background: rgba(0,0,0,0.05);
+    }
+
     .skill:hover {
       border-color: var(--accent);
       color: var(--accent);
@@ -115,11 +151,15 @@
       padding: 10px 14px;
       background: rgba(255,255,255,0.05);
       border: 1px solid var(--border);
-      border-radius: var(--radius);
+      border-radius: 18px;
       margin-bottom: 10px;
       color: var(--text);
       font-size: 14px;
       transition: var(--transition);
+    }
+
+    :root[data-theme="light"] .links a {
+      background: rgba(0,0,0,0.05);
     }
 
     .links a:hover {
@@ -141,27 +181,32 @@
 
     <header>
       <div class="logo">Adnan AlShubbar</div>
-      <nav>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </nav>
+
+      <div style="display:flex; align-items:center; gap:12px;">
+        <button class="toggle-btn" id="themeToggle">🌙 Dark</button>
+
+        <nav>
+          <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
     </header>
 
     <div class="hero">
       <h1>Real Time Technical Advisor at Baker Hughes</h1>
       <p>
         MSc in Distributed Systems & Networks (University of Kent) and BSc in Computer Engineering (KFUPM).  
-        Passionate about real-time data, distributed systems, and operational excellence.
+        Passionate about real-time operations, distributed systems, and data transmission.
       </p>
     </div>
 
     <section id="about">
       <h2>About</h2>
       <div class="card">
-        Holding an MSc in Distributed Systems and Networks from the University of Kent and a BSc in Computer Engineering from KFUPM.  
-        Currently working as a Real Time Technical Advisor at Baker Hughes, supporting real-time operations and data-driven decision-making.  
-        Hard‑working, objective‑driven, and passionate about distributed systems and data transmission.
+        Hard‑working, objective‑driven, and passionate about distributed systems and real-time data transmission.  
+        I enjoy solving operational challenges, supporting real-time decision-making, and working with systems that require precision, reliability, and speed.
       </div>
     </section>
 
@@ -171,31 +216,43 @@
       <div class="card">
         <div class="role">Real Time Technical Advisor · Baker Hughes</div>
         <div class="meta">Eastern Province, Saudi Arabia</div>
-        <div>
-          Supporting real-time drilling operations, monitoring live data, and enabling faster, safer, and more efficient decision-making.
-        </div>
+        Supporting real-time drilling operations, monitoring live data, and enabling faster, safer, and more efficient decision-making.
       </div>
     </section>
 
     <section id="skills">
       <h2>Skills</h2>
       <div class="skills">
-        <span class="skill">Real-Time Data</span>
+        <span class="skill">Drilling Real-Time Data Transmission</span>
         <span class="skill">Distributed Systems</span>
-        <span class="skill">Operational Support</span>
-        <span class="skill">Networking</span>
-        <span class="skill">Systems Engineering</span>
-        <span class="skill">Technical Advisory</span>
+        <span class="skill">Cloud</span>
+        <span class="skill">XML</span>
+        <span class="skill">JASON</span>
+        <span class="skill">SQL</span>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+
+      <div class="card">
+        <div class="role">MSc – Distributed Systems & Networks</div>
+        <div class="meta">University of Kent</div>
+      </div>
+
+      <div class="card">
+        <div class="role">BSc – Computer Engineering</div>
+        <div class="meta">King Fahd University of Petroleum & Minerals (KFUPM)</div>
       </div>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
       <div class="links">
-        <a href="mailto:adnan@example.com">Email</a>
+        <a href="mailto:adnan.alshubbar@gmail.com">Email</a>
         <a href="https://www.linkedin.com/in/adnanalshubbar" target="_blank">LinkedIn</a>
         <a href="https://github.com/AdnanAlShubbar" target="_blank">GitHub</a>
-        <a href="https://www.adnankalshubbar.com" target="_blank">Website</a>
+        <a href="https://adnanalshubbar.github.io" target="_blank">Website</a>
       </div>
     </section>
 
@@ -206,7 +263,25 @@
   </main>
 
   <script>
+    // Load saved theme
+    const savedTheme = localStorage.getItem("theme") || "dark";
+    document.documentElement.setAttribute("data-theme", savedTheme);
+
+    const toggleBtn = document.getElementById("themeToggle");
+    toggleBtn.textContent = savedTheme === "dark" ? "🌙 Dark" : "☀️ Light";
+
+    toggleBtn.addEventListener("click", () => {
+      const current = document.documentElement.getAttribute("data-theme");
+      const next = current === "dark" ? "light" : "dark";
+
+      document.documentElement.setAttribute("data-theme", next);
+      localStorage.setItem("theme", next);
+
+      toggleBtn.textContent = next === "dark" ? "🌙 Dark" : "☀️ Light";
+    });
+
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>
