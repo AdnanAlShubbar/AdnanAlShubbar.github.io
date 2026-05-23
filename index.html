@@ -3,15 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adnan AlShubbar | Real-Time Technical Advisor & Engineer</title>
+    <title>Adnan AlShubbar | Real-Time Technical Advisor & Data Engineer</title>
     <style>
+        /* Base Dynamic Theme Styling using CSS Variables */
         :root {
             --bg-color: #f4f6f9;
             --text-color: #2c3e50;
+            --text-muted: #4a5568;
             --accent-color: #0056b3; 
-            --accent-secondary: #17a2b8;
             --card-bg: #ffffff;
             --border-color: #e9ecef;
+            --header-gradient: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            --skill-bg: #eef2f7;
+            --skill-text: #2a5298;
+        }
+
+        /* Dark Mode Override Variables */
+        [data-theme="dark"] {
+            --bg-color: #0f172a;
+            --text-color: #f8fafc;
+            --text-muted: #cbd5e1;
+            --accent-color: #38bdf8; 
+            --card-bg: #1e293b;
+            --border-color: #334155;
+            --header-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            --skill-bg: #334155;
+            --skill-text: #38bdf8;
         }
 
         * {
@@ -19,6 +36,7 @@
             margin: 0;
             padding: 0;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
         }
 
         body {
@@ -28,11 +46,38 @@
             padding: 0;
         }
 
+        /* Floating Theme Toggle Switch */
+        .theme-toggle-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .theme-btn {
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            border: 1px solid var(--border-color);
+            padding: 10px 16px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.85rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .theme-btn:hover {
+            opacity: 0.9;
+        }
+
         /* Hero Header Section */
         header {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            background: var(--header-gradient);
             color: white;
-            padding: 80px 20px;
+            padding: 90px 20px 80px 20px;
             text-align: center;
         }
 
@@ -65,7 +110,7 @@
             background-color: rgba(255, 255, 255, 0.3);
         }
 
-        /* Layout */
+        /* Layout Layout */
         main {
             max-width: 900px;
             margin: 40px auto;
@@ -83,18 +128,17 @@
         section h2 {
             font-size: 1.8rem;
             margin-bottom: 25px;
-            color: #1e3c72;
+            color: var(--accent-color);
             border-bottom: 3px solid var(--bg-color);
             padding-bottom: 10px;
         }
 
-        /* Profile/Summary */
         .intro-text {
             font-size: 1.1rem;
-            color: #4a5568;
+            color: var(--text-muted);
         }
 
-        /* Experience & Projects */
+        /* Items Blocks */
         .block-item {
             margin-bottom: 30px;
             padding-bottom: 20px;
@@ -110,7 +154,7 @@
         .block-title {
             font-weight: 700;
             font-size: 1.25rem;
-            color: #2d3748;
+            color: var(--text-color);
         }
 
         .block-subtitle {
@@ -122,13 +166,14 @@
 
         .block-meta {
             font-size: 0.9rem;
-            color: #718096;
+            color: var(--text-muted);
             margin-bottom: 12px;
             font-style: italic;
+            opacity: 0.85;
         }
 
         .block-item p {
-            color: #4a5568;
+            color: var(--text-muted);
             font-size: 1rem;
         }
 
@@ -140,8 +185,8 @@
         }
 
         .skill-badge {
-            background-color: #eef2f7;
-            color: #2a5298;
+            background-color: var(--skill-bg);
+            color: var(--skill-text);
             padding: 8px 16px;
             border-radius: 6px;
             font-size: 0.9rem;
@@ -160,11 +205,18 @@
 </head>
 <body>
 
+    <!-- Theme Toggle Switch Button -->
+    <div class="theme-toggle-container">
+        <button class="theme-btn" id="themeToggle" aria-label="Toggle dark mode">
+            <span id="themeIcon">🌙</span> <span id="themeText">Dark Mode</span>
+        </button>
+    </div>
+
     <header>
         <h1>Adnan AlShubbar</h1>
         <p>Real-Time Technical Advisor | Distributed Systems & Computer Engineer</p>
         <div class="social-links">
-            <a href="https://www.linkedin.com" target="_blank">Connect on LinkedIn</a>
+            <a href="https://www.linkedin.com/in/adnanalshubbar/" target="_blank">Connect on LinkedIn</a>
         </div>
     </header>
 
@@ -173,7 +225,7 @@
         <section id="about">
             <h2>Professional Profile</h2>
             <p class="intro-text">
-                Expert Technical Advisor specializing in WITSML real-time drilling data transmission, visualization, and distributed systems engineering. Proven track record in orchestrating large-scale cloud-native adaptations and infrastructure upgrades to meet stringent service compliance guidelines. Adept at driving data-driven decisions and KPIs within major oilfield environments through robust cross-vendor coordination and scalable architecture deployment.
+                Expert Technical Advisor specializing in WITSML real-time drilling data transmission, visualization, and distributed systems engineering. Proven track record in orchestrating deployment large-scale adaptations and infrastructure upgrades to meet stringent service compliance guidelines. Adept at driving data-driven decisions and KPIs within major oilfield environments through robust cross-vendor coordination and scalable architecture deployment.
             </p>
         </section>
 
@@ -182,21 +234,21 @@
             <h2>Key Deployments & Projects</h2>
             
             <div class="block-item">
-                <div class="block-title">CORVA Deployment in Saudi Arabia</div>
-                <div class="block-meta">Deployment Leader & Technical Lead | 2024</div>
-                <p>Successfully adapted and deployed CORVA, a cloud-native real-time system, to work within an on-premise infrastructure layout. Provided comprehensive front-end and back-end troubleshooting to deliver real-time data visualization, optimization KPIs, and advanced engineering capabilities directly to ongoing drilling operations.</p>
+                <div class="block-title">Drilling Analytics platform deployement in KSA</div>
+                <div class="block-meta">Baker Hughes | 2024</div>
+                <p>Successfully adapted and deployed CORVA, a cloud-native real-time system, to work within an on-premise infrastructure layout. Provided comprehensive front-end and back-end troubleshooting to deliver real-time data visualization, optimization KPIs, and advanced engineering capabilities directly to drilling operations.</p>
             </div>
 
             <div class="block-item">
                 <div class="block-title">Drilling Data Acquisition System Upgrade</div>
                 <div class="block-meta">Baker Hughes | 2022</div>
-                <p>Led the strategic localization of an advanced data acquisition system designed to satisfy precise operator metrics. Analyzed operational criteria, collaborated tightly with development engineering teams, executed compliance testing, and executed configuration updates.</p>
+                <p>Led the strategic localization of data acquisition system. Analyzed operational criteria, collaborated tightly with development engineering teams, executed compliance testing, and executed configuration updates.</p>
             </div>
 
             <div class="block-item">
-                <div class="block-title">Saudi Aramco RTDTVS Deployment</div>
+                <div class="block-title">Drilling Data visualization platform deployement in KSA</div>
                 <div class="block-meta">Baker Hughes | 2020</div>
-                <p>Guided multiple facets of the initial deployment phase for real-time data transmission systems (RTDTVS). Established custom software mapping configurations, evaluated service company compatibility matrices, and directly aligned operations with regional enterprise data parameters.</p>
+                <p>Guided multiple teams in the initial deployment phase for real-time data transmission systems (RTDTVS). Established custom software mapping configurations, evaluated service company compatibility matrices, and directly aligned teams with client data requirements.</p>
             </div>
         </section>
 
@@ -208,7 +260,7 @@
                 <div class="block-title">Real-Time Technical Advisor</div>
                 <div class="block-subtitle">Baker Hughes · Dhahran, Saudi Arabia</div>
                 <div class="block-meta">August 2020 – Present</div>
-                <p>Manage standard WITSML data streaming pipelines and analytics platforms. Oversee mapping schema customization, pipeline workflow implementations, and multi-party vendor management to actively resolve streaming bugs or telemetry edge-cases. Enable deep operational value by mapping raw downhole streaming metrics to real-time drilling efficiency indicators.</p>
+                <p>Manage standard WITSML data streaming pipelines and analytics platforms. Oversee mapping schema customization, data pipeline workflow implementations, and multi-party vendor management to actively resolve streaming issues. Enable deep operational value by mapping raw downhole streaming metrics to real-time drilling efficiency indicators.</p>
             </div>
 
             <div class="block-item">
@@ -222,14 +274,14 @@
                 <div class="block-title">IT Help Desk System Analyst</div>
                 <div class="block-subtitle">MENA Business Services · Khobar, Saudi Arabia</div>
                 <div class="block-meta">June 2012 – January 2014</div>
-                <p>Managed technical response workflows, systematically tracking application failures and infrastructure bugs. Built comprehensive escalations and conducted rapid systems triage to maintain high uptime for corporate end-users.</p>
+                <p>Managed technical response, systematically tracking application failures and infrastructure bugs.</p>
             </div>
 
             <div class="block-item">
                 <div class="block-title">Information Protection Division COOP Trainee</div>
                 <div class="block-subtitle">Saudi Aramco · Dhahran, Saudi Arabia</div>
                 <div class="block-meta">July 2007 – January 2008</div>
-                <p>Executed structural risk assessments and verified infrastructure security controls through deliberate system penetration testing. Drafted corporate awareness materials designed to harden user behaviors against targeted digital threats.</p>
+                <p>Executed IT risk assessments and verified infrastructure security controls through deliberate system penetration testing. Drafted corporate awareness materials designed to harden user behaviors against targeted digital threats.</p>
             </div>
         </section>
 
@@ -242,8 +294,8 @@
                 <span class="skill-badge">Cloud-Native & In-Premise Architectures</span>
                 <span class="skill-badge">Drilling Operations Analytics</span>
                 <span class="skill-badge">Distributed Systems & Networks</span>
-                <span class="skill-badge">Java Programming</span>
-                <span class="skill-badge">Team Leadership & Operations Management</span>
+                <span class="skill-badge">XML, JASON and SQL</span>
+                <span class="skill-badge">Change Managment</span>
                 <span class="skill-badge">Penetration Testing & Security Risk Assessment</span>
                 <span class="skill-badge">Cross-Functional Stakeholder Management</span>
             </div>
@@ -273,5 +325,39 @@
         <p>&copy; 2026 Adnan AlShubbar. Portfolio powered by clean code.</p>
     </footer>
 
+    <!-- Logic For Theme Toggle Switching -->
+    <script>
+        const toggleBtn = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const themeText = document.getElementById('themeText');
+
+        // Check if user previously saved a theme preference
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme) {
+            document.documentElement.setAttribute('data-theme', currentTheme);
+            if (currentTheme === 'dark') {
+                updateToggleButton(true);
+            }
+        }
+
+        // Add event listener to handle toggling click
+        toggleBtn.addEventListener('click', () => {
+            let theme = document.documentElement.getAttribute('data-theme');
+            if (theme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+                updateToggleButton(false);
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                updateToggleButton(true);
+            }
+        });
+
+        function updateToggleButton(isDark) {
+            themeIcon.textContent = isDark ? '☀️' : '🌙';
+            themeText.textContent = isDark ? 'Light Mode' : 'Dark Mode';
+        }
+    </script>
 </body>
 </html>
