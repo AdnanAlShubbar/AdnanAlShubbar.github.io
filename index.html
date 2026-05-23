@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Adnan AlShubbar | Real Time Technical Advisor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Adnan AlShubbar – Real Time Technical Advisor at Baker Hughes, specializing in distributed systems, real-time data, and operational support." />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #0a0d14;
+      --bg-card: #111622;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #38bdf8;
+      --border: rgba(255,255,255,0.08);
+      --radius: 18px;
+      --shadow: 0 20px 40px rgba(0,0,0,0.45);
+      --transition: 200ms ease;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Inter", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 40px 20px;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    nav a {
+      margin-left: 18px;
+      color: var(--muted);
+      font-size: 14px;
+      transition: var(--transition);
+    }
+
+    nav a:hover { color: var(--accent); }
+
+    .hero h1 {
+      font-size: 42px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    section { margin-bottom: 40px; }
+
+    section h2 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 20px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin-bottom: 16px;
+      transition: var(--transition);
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent);
+    }
+
+    .role { font-weight: 600; font-size: 15px; }
+    .meta { font-size: 13px; color: var(--muted); margin-bottom: 6px; }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .skill {
+      padding: 6px 12px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: 13px;
+      color: var(--text);
+      transition: var(--transition);
+    }
+
+    .skill:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .links a {
+      display: block;
+      padding: 10px 14px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 10px;
+      color: var(--text);
+      font-size: 14px;
+      transition: var(--transition);
+    }
+
+    .links a:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+
+    <header>
+      <div class="logo">Adnan AlShubbar</div>
+      <nav>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <h1>Real Time Technical Advisor at Baker Hughes</h1>
+      <p>
+        MSc in Distributed Systems & Networks (University of Kent) and BSc in Computer Engineering (KFUPM).  
+        Passionate about real-time data, distributed systems, and operational excellence.
+      </p>
+    </div>
+
+    <section id="about">
+      <h2>About</h2>
+      <div class="card">
+        Holding an MSc in Distributed Systems and Networks from the University of Kent and a BSc in Computer Engineering from KFUPM.  
+        Currently working as a Real Time Technical Advisor at Baker Hughes, supporting real-time operations and data-driven decision-making.  
+        Hard‑working, objective‑driven, and passionate about distributed systems and data transmission.
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+
+      <div class="card">
+        <div class="role">Real Time Technical Advisor · Baker Hughes</div>
+        <div class="meta">Eastern Province, Saudi Arabia</div>
+        <div>
+          Supporting real-time drilling operations, monitoring live data, and enabling faster, safer, and more efficient decision-making.
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills">
+        <span class="skill">Real-Time Data</span>
+        <span class="skill">Distributed Systems</span>
+        <span class="skill">Operational Support</span>
+        <span class="skill">Networking</span>
+        <span class="skill">Systems Engineering</span>
+        <span class="skill">Technical Advisory</span>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="links">
+        <a href="mailto:adnan@example.com">Email</a>
+        <a href="https://www.linkedin.com/in/adnanalshubbar" target="_blank">LinkedIn</a>
+        <a href="https://github.com/AdnanAlShubbar" target="_blank">GitHub</a>
+        <a href="https://www.adnankalshubbar.com" target="_blank">Website</a>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Adnan AlShubbar — All rights reserved.
+    </footer>
+
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
