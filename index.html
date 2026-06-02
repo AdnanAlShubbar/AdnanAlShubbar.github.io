@@ -10,7 +10,7 @@
             --bg-color: #f1f7f4;
             --text-color: #1b3322;
             --text-muted: #3d5a45;
-            --accent-color: #2d6a4f;
+            --accent-color: #2d6a4f; 
             --card-bg: #ffffff;
             --border-color: #e2ede7;
             --header-gradient: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%);
@@ -24,7 +24,7 @@
             --bg-color: #0b140f;
             --text-color: #e8f5e9;
             --text-muted: #b2c7b9;
-            --accent-color: #52b788;
+            --accent-color: #52b788; 
             --card-bg: #14241c;
             --border-color: #223c2e;
             --header-gradient: linear-gradient(135deg, #08100c 0%, #14241c 100%);
@@ -71,9 +71,9 @@
             gap: 8px;
         }
 
-            .theme-btn:hover {
-                opacity: 0.9;
-            }
+        .theme-btn:hover {
+            opacity: 0.9;
+        }
 
         /* Hero Header Section */
         header {
@@ -83,19 +83,19 @@
             text-align: center;
         }
 
-            header h1 {
-                font-size: 2.8rem;
-                margin-bottom: 10px;
-                letter-spacing: -0.5px;
-            }
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
 
-            header p {
-                font-size: 1.3rem;
-                opacity: 0.9;
-                max-width: 700px;
-                margin: 0 auto 25px auto;
-                font-weight: 300;
-            }
+        header p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 25px auto;
+            font-weight: 300;
+        }
 
         .social-links a {
             background-color: rgba(255, 255, 255, 0.2);
@@ -108,9 +108,9 @@
             display: inline-block;
         }
 
-            .social-links a:hover {
-                background-color: rgba(255, 255, 255, 0.3);
-            }
+        .social-links a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
 
         /* Layout Layout */
         main {
@@ -127,13 +127,13 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
         }
 
-            section h2 {
-                font-size: 1.8rem;
-                margin-bottom: 25px;
-                color: var(--accent-color);
-                border-bottom: 3px solid var(--bg-color);
-                padding-bottom: 10px;
-            }
+        section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            color: var(--accent-color);
+            border-bottom: 3px solid var(--bg-color);
+            padding-bottom: 10px;
+        }
 
         .intro-text {
             font-size: 1.1rem;
@@ -147,11 +147,11 @@
             border-bottom: 1px solid var(--border-color);
         }
 
-            .block-item:last-child {
-                margin-bottom: 0;
-                padding-bottom: 0;
-                border-bottom: none;
-            }
+        .block-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
 
         .block-title {
             font-weight: 700;
@@ -179,7 +179,7 @@
             font-size: 1rem;
         }
 
-        /* Education Block with Flexible Layout for Logo Box */
+        /* Education & Experience Container with Flexible Layout for Logo Box */
         .edu-item-container {
             display: flex;
             gap: 20px;
@@ -201,12 +201,12 @@
             overflow: hidden;
         }
 
-            .edu-logo-placeholder img {
-                width: 100%;
-                height: 100%;
-                object-fit: contain;
-                padding: 4px;
-            }
+        .edu-logo-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 4px;
+        }
 
         .edu-text-content {
             flex-grow: 1;
@@ -272,7 +272,7 @@
 
         <section id="projects">
             <h2>Key Deployments & Projects</h2>
-
+            
             <div class="block-item">
                 <div class="block-title">Drilling Analytics platform deployment in KSA</div>
                 <div class="block-meta">Baker Hughes | 2024</div>
@@ -294,33 +294,61 @@
 
         <section id="experience">
             <h2>Professional Experience</h2>
-
+            
             <div class="block-item">
-                <div class="block-title">Real-Time Technical Advisor</div>
-                <div class="block-subtitle">Baker Hughes · Dhahran, Saudi Arabia</div>
-                <div class="block-meta">August 2020 – Present</div>
-                <p>Manage standard WITSML data streaming pipelines and analytics platforms. Oversee mapping schema customization, data pipeline workflow implementations, and multi-party vendor management to actively resolve streaming issues. Enable deep operational value by mapping raw downhole streaming metrics to real-time drilling efficiency indicators.</p>
+                <div class="edu-item-container">
+                    <div class="edu-logo-placeholder">
+                        💼
+                    </div>
+                    <div class="edu-text-content">
+                        <div class="block-title">Real-Time Technical Advisor</div>
+                        <div class="block-subtitle">Baker Hughes · Dhahran, Saudi Arabia</div>
+                        <div class="block-meta">August 2020 – Present</div>
+                        <p>Manage standard WITSML data streaming pipelines and analytics platforms. Oversee mapping schema customization, data pipeline workflow implementations, and multi-party vendor management to actively resolve streaming issues. Enable deep operational value by mapping raw downhole streaming metrics to real-time drilling efficiency indicators.</p>
+                    </div>
+                </div>
             </div>
 
             <div class="block-item">
-                <div class="block-title">RTOC Support Team Leader</div>
-                <div class="block-subtitle">Petrolink · Dhahran, Saudi Arabia</div>
-                <div class="block-meta">January 2014 – July 2020</div>
-                <p>Directed the Real-Time Operations Center technical support group. Spearheaded data continuity audits and telemetry streaming validation for enterprise drilling platforms. Championed team training, drafted emergency operational recovery playbooks, and standardized internal diagnostic reporting models.</p>
+                <div class="edu-item-container">
+                    <div class="edu-logo-placeholder">
+                        💼
+                    </div>
+                    <div class="edu-text-content">
+                        <div class="block-title">RTOC Support Team Leader</div>
+                        <div class="block-subtitle">Petrolink · Dhahran, Saudi Arabia</div>
+                        <div class="block-meta">January 2014 – July 2020</div>
+                        <p>Directed the Real-Time Operations Center technical support group. Spearheaded data continuity audits and telemetry streaming validation for enterprise drilling platforms. Championed team training, drafted emergency operational recovery playbooks, and standardized internal diagnostic reporting models.</p>
+                    </div>
+                </div>
             </div>
 
             <div class="block-item">
-                <div class="block-title">IT Help Desk System Analyst</div>
-                <div class="block-subtitle">MENA Business Services · Khobar, Saudi Arabia</div>
-                <div class="block-meta">June 2012 – January 2014</div>
-                <p>Managed technical response, systematically tracking application failures and infrastructure bugs.</p>
+                <div class="edu-item-container">
+                    <div class="edu-logo-placeholder">
+                        💼
+                    </div>
+                    <div class="edu-text-content">
+                        <div class="block-title">IT Help Desk System Analyst</div>
+                        <div class="block-subtitle">MENA Business Services · Khobar, Saudi Arabia</div>
+                        <div class="block-meta">June 2012 – January 2014</div>
+                        <p>Managed technical response, systematically tracking application failures and infrastructure bugs.</p>
+                    </div>
+                </div>
             </div>
 
             <div class="block-item">
-                <div class="block-title">Information Protection Division COOP Trainee</div>
-                <div class="block-subtitle">Saudi Aramco · Dhahran, Saudi Arabia</div>
-                <div class="block-meta">July 2007 – January 2008</div>
-                <p>Executed IT risk assessments and verified infrastructure security controls through deliberate system penetration testing. Drafted corporate awareness materials designed to harden user behaviors against targeted digital threats.</p>
+                <div class="edu-item-container">
+                    <div class="edu-logo-placeholder">
+                        💼
+                    </div>
+                    <div class="edu-text-content">
+                        <div class="block-title">Information Protection Division COOP Trainee</div>
+                        <div class="block-subtitle">Saudi Aramco · Dhahran, Saudi Arabia</div>
+                        <div class="block-meta">July 2007 – January 2008</div>
+                        <p>Executed IT risk assessments and verified infrastructure security controls through deliberate system penetration testing. Drafted corporate awareness materials designed to harden user behaviors against targeted digital threats.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -341,7 +369,7 @@
 
         <section id="education">
             <h2>Education</h2>
-
+            
             <div class="block-item">
                 <div class="edu-item-container">
                     <div class="edu-logo-placeholder">
