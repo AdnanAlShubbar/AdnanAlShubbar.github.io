@@ -5,30 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adnan AlShubbar | Real-Time Technical Advisor & Data Engineer</title>
     <style>
-        /* Base Dynamic Theme Styling using CSS Variables */
+        /* Base Dynamic Theme Styling using CSS Variables - Dark Green Palette */
         :root {
-            --bg-color: #f4f6f9;
-            --text-color: #2c3e50;
-            --text-muted: #4a5568;
-            --accent-color: #0056b3; 
+            --bg-color: #f1f7f4;
+            --text-color: #1b3322;
+            --text-muted: #3d5a45;
+            --accent-color: #2d6a4f;
             --card-bg: #ffffff;
-            --border-color: #e9ecef;
-            --header-gradient: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            --skill-bg: #eef2f7;
-            --skill-text: #2a5298;
+            --border-color: #e2ede7;
+            --header-gradient: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%);
+            --skill-bg: #d8f3dc;
+            --skill-text: #1b4332;
+            --logo-bg: #f7fbf9;
         }
 
-        /* Dark Mode Override Variables */
+        /* Dark Mode Override Variables - Deep Dark Green */
         [data-theme="dark"] {
-            --bg-color: #0f172a;
-            --text-color: #f8fafc;
-            --text-muted: #cbd5e1;
-            --accent-color: #38bdf8; 
-            --card-bg: #1e293b;
-            --border-color: #334155;
-            --header-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            --skill-bg: #334155;
-            --skill-text: #38bdf8;
+            --bg-color: #0b140f;
+            --text-color: #e8f5e9;
+            --text-muted: #b2c7b9;
+            --accent-color: #52b788;
+            --card-bg: #14241c;
+            --border-color: #223c2e;
+            --header-gradient: linear-gradient(135deg, #08100c 0%, #14241c 100%);
+            --skill-bg: #1b4332;
+            --skill-text: #74c69d;
+            --logo-bg: #14241c;
         }
 
         * {
@@ -69,9 +71,9 @@
             gap: 8px;
         }
 
-        .theme-btn:hover {
-            opacity: 0.9;
-        }
+            .theme-btn:hover {
+                opacity: 0.9;
+            }
 
         /* Hero Header Section */
         header {
@@ -81,19 +83,19 @@
             text-align: center;
         }
 
-        header h1 {
-            font-size: 2.8rem;
-            margin-bottom: 10px;
-            letter-spacing: -0.5px;
-        }
+            header h1 {
+                font-size: 2.8rem;
+                margin-bottom: 10px;
+                letter-spacing: -0.5px;
+            }
 
-        header p {
-            font-size: 1.3rem;
-            opacity: 0.9;
-            max-width: 700px;
-            margin: 0 auto 25px auto;
-            font-weight: 300;
-        }
+            header p {
+                font-size: 1.3rem;
+                opacity: 0.9;
+                max-width: 700px;
+                margin: 0 auto 25px auto;
+                font-weight: 300;
+            }
 
         .social-links a {
             background-color: rgba(255, 255, 255, 0.2);
@@ -106,9 +108,9 @@
             display: inline-block;
         }
 
-        .social-links a:hover {
-            background-color: rgba(255, 255, 255, 0.3);
-        }
+            .social-links a:hover {
+                background-color: rgba(255, 255, 255, 0.3);
+            }
 
         /* Layout Layout */
         main {
@@ -125,13 +127,13 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
         }
 
-        section h2 {
-            font-size: 1.8rem;
-            margin-bottom: 25px;
-            color: var(--accent-color);
-            border-bottom: 3px solid var(--bg-color);
-            padding-bottom: 10px;
-        }
+            section h2 {
+                font-size: 1.8rem;
+                margin-bottom: 25px;
+                color: var(--accent-color);
+                border-bottom: 3px solid var(--bg-color);
+                padding-bottom: 10px;
+            }
 
         .intro-text {
             font-size: 1.1rem;
@@ -145,11 +147,11 @@
             border-bottom: 1px solid var(--border-color);
         }
 
-        .block-item:last-child {
-            margin-bottom: 0;
-            padding-bottom: 0;
-            border-bottom: none;
-        }
+            .block-item:last-child {
+                margin-bottom: 0;
+                padding-bottom: 0;
+                border-bottom: none;
+            }
 
         .block-title {
             font-weight: 700;
@@ -177,6 +179,39 @@
             font-size: 1rem;
         }
 
+        /* Education Block with Flexible Layout for Logo Box */
+        .edu-item-container {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .edu-logo-placeholder {
+            width: 70px;
+            height: 70px;
+            min-width: 70px;
+            background-color: var(--logo-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+            overflow: hidden;
+        }
+
+            .edu-logo-placeholder img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                padding: 4px;
+            }
+
+        .edu-text-content {
+            flex-grow: 1;
+        }
+
         /* Skills Grid */
         .skills-container {
             display: flex;
@@ -197,15 +232,22 @@
             text-align: center;
             padding: 40px 0;
             font-size: 0.9rem;
-            color: #a0aec0;
-            background-color: #1a202c;
+            color: #8da394;
+            background-color: #0b140f;
             margin-top: 60px;
+        }
+
+        /* Responsive handling for small views */
+        @media (max-width: 576px) {
+            .edu-item-container {
+                flex-direction: column;
+                gap: 12px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- Theme Toggle Switch Button -->
     <div class="theme-toggle-container">
         <button class="theme-btn" id="themeToggle" aria-label="Toggle dark mode">
             <span id="themeIcon">🌙</span> <span id="themeText">Dark Mode</span>
@@ -221,7 +263,6 @@
     </header>
 
     <main>
-        <!-- Professional Summary -->
         <section id="about">
             <h2>Professional Profile</h2>
             <p class="intro-text">
@@ -229,10 +270,9 @@
             </p>
         </section>
 
-        <!-- Selected Projects -->
         <section id="projects">
             <h2>Key Deployments & Projects</h2>
-            
+
             <div class="block-item">
                 <div class="block-title">Drilling Analytics platform deployment in KSA</div>
                 <div class="block-meta">Baker Hughes | 2024</div>
@@ -246,16 +286,15 @@
             </div>
 
             <div class="block-item">
-                <div class="block-title">Drilling Data visualization platform deployement in KSA</div>
+                <div class="block-title">Drilling Data visualization platform deployment in KSA</div>
                 <div class="block-meta">Baker Hughes | 2020</div>
                 <p>Guided multiple teams in the initial deployment phase for real-time data transmission systems (RTDTVS). Established custom software mapping configurations, evaluated service company compatibility matrices, and directly aligned teams with client data requirements.</p>
             </div>
         </section>
 
-        <!-- Professional Experience -->
         <section id="experience">
             <h2>Professional Experience</h2>
-            
+
             <div class="block-item">
                 <div class="block-title">Real-Time Technical Advisor</div>
                 <div class="block-subtitle">Baker Hughes · Dhahran, Saudi Arabia</div>
@@ -285,7 +324,6 @@
             </div>
         </section>
 
-        <!-- Technical Expertise -->
         <section id="skills">
             <h2>Skills & Expertise</h2>
             <div class="skills-container">
@@ -295,28 +333,41 @@
                 <span class="skill-badge">Drilling Operations Analytics</span>
                 <span class="skill-badge">Distributed Systems & Networks</span>
                 <span class="skill-badge">XML, JSON and SQL</span>
-                <span class="skill-badge">Change Managment</span>
+                <span class="skill-badge">Change Management</span>
                 <span class="skill-badge">Penetration Testing & Security Risk Assessment</span>
                 <span class="skill-badge">Cross-Functional Stakeholder Management</span>
             </div>
         </section>
 
-        <!-- Education Background -->
         <section id="education">
             <h2>Education</h2>
-            
+
             <div class="block-item">
-                <div class="block-title">MSc in Distributed Systems and Networks</div>
-                <div class="block-subtitle">University of Kent · United Kingdom</div>
-                <div class="block-meta">Graduated June 2011</div>
-                <p>Concentrations in network protocol design, advanced Java development, information security controls, and distributed computing patterns. <strong>Master's Thesis:</strong> Functional programming optimizations utilizing speculative parallelism to accelerate computational throughput past data dependencies.</p>
+                <div class="edu-item-container">
+                    <div class="edu-logo-placeholder">
+                        🎓
+                    </div>
+                    <div class="edu-text-content">
+                        <div class="block-title">MSc in Distributed Systems and Networks</div>
+                        <div class="block-subtitle">University of Kent · United Kingdom</div>
+                        <div class="block-meta">Graduated June 2011</div>
+                        <p>Concentrations in network protocol design, advanced Java development, information security controls, and distributed computing patterns. <strong>Master's Thesis:</strong> Functional programming optimizations utilizing speculative parallelism to accelerate computational throughput past data dependencies.</p>
+                    </div>
+                </div>
             </div>
 
             <div class="block-item">
-                <div class="block-title">BSc in Computer Engineering (3rd Honor)</div>
-                <div class="block-subtitle">King Fahd University of Petroleum & Minerals · Dhahran, Saudi Arabia</div>
-                <div class="block-meta">Graduated June 2008</div>
-                <p>Academic foundation focused on modular computer architectures, foundational networking schemas, software development paradigms, and hardware systems logic.</p>
+                <div class="edu-item-container">
+                    <div class="edu-logo-placeholder">
+                        🎓
+                    </div>
+                    <div class="edu-text-content">
+                        <div class="block-title">BSc in Computer Engineering (3rd Honor)</div>
+                        <div class="block-subtitle">King Fahd University of Petroleum & Minerals · Dhahran, Saudi Arabia</div>
+                        <div class="block-meta">Graduated June 2008</div>
+                        <p>Academic foundation focused on modular computer architectures, foundational networking schemas, software development paradigms, and hardware systems logic.</p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -325,7 +376,6 @@
         <p>&copy; 2026 Adnan AlShubbar. Portfolio powered by clean code.</p>
     </footer>
 
-    <!-- Logic For Theme Toggle Switching -->
     <script>
         const toggleBtn = document.getElementById('themeToggle');
         const themeIcon = document.getElementById('themeIcon');
