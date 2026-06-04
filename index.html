@@ -10,7 +10,7 @@
             --bg-color: #f1f7f4;
             --text-color: #1b3322;
             --text-muted: #3d5a45;
-            --accent-color: #2d6a4f; 
+            --accent-color: #2d6a4f;
             --card-bg: #ffffff;
             --border-color: #e2ede7;
             --header-gradient: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%);
@@ -24,7 +24,7 @@
             --bg-color: #0b140f;
             --text-color: #e8f5e9;
             --text-muted: #b2c7b9;
-            --accent-color: #52b788; 
+            --accent-color: #52b788;
             --card-bg: #14241c;
             --border-color: #223c2e;
             --header-gradient: linear-gradient(135deg, #08100c 0%, #14241c 100%);
@@ -71,9 +71,9 @@
             gap: 8px;
         }
 
-        .theme-btn:hover {
-            opacity: 0.9;
-        }
+            .theme-btn:hover {
+                opacity: 0.9;
+            }
 
         /* Hero Header Section */
         header {
@@ -83,34 +83,48 @@
             text-align: center;
         }
 
-        header h1 {
-            font-size: 2.8rem;
-            margin-bottom: 10px;
-            letter-spacing: -0.5px;
+            header h1 {
+                font-size: 2.8rem;
+                margin-bottom: 10px;
+                letter-spacing: -0.5px;
+            }
+
+            header p {
+                font-size: 1.3rem;
+                opacity: 0.9;
+                max-width: 700px;
+                margin: 0 auto 25px auto;
+                font-weight: 300;
+            }
+
+        /* Flex container for social buttons */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
-        header p {
-            font-size: 1.3rem;
-            opacity: 0.9;
-            max-width: 700px;
-            margin: 0 auto 25px auto;
-            font-weight: 300;
-        }
+            .social-links a {
+                background-color: rgba(255, 255, 255, 0.2);
+                color: white;
+                text-decoration: none;
+                padding: 10px 24px;
+                border-radius: 30px;
+                font-weight: 500;
+                font-size: 0.95rem;
+                transition: background 0.3s ease;
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+            }
 
-        .social-links a {
-            background-color: rgba(255, 255, 255, 0.2);
-            color: white;
-            text-decoration: none;
-            padding: 10px 24px;
-            border-radius: 30px;
-            font-weight: 500;
-            transition: background 0.3s ease;
-            display: inline-block;
-        }
-
-        .social-links a:hover {
-            background-color: rgba(255, 255, 255, 0.3);
-        }
+                .social-links a:hover {
+                    background-color: rgba(255, 255, 255, 0.3);
+                }
 
         /* Layout Layout */
         main {
@@ -127,13 +141,13 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
         }
 
-        section h2 {
-            font-size: 1.8rem;
-            margin-bottom: 25px;
-            color: var(--accent-color);
-            border-bottom: 3px solid var(--bg-color);
-            padding-bottom: 10px;
-        }
+            section h2 {
+                font-size: 1.8rem;
+                margin-bottom: 25px;
+                color: var(--accent-color);
+                border-bottom: 3px solid var(--bg-color);
+                padding-bottom: 10px;
+            }
 
         .intro-text {
             font-size: 1.1rem;
@@ -147,11 +161,11 @@
             border-bottom: 1px solid var(--border-color);
         }
 
-        .block-item:last-child {
-            margin-bottom: 0;
-            padding-bottom: 0;
-            border-bottom: none;
-        }
+            .block-item:last-child {
+                margin-bottom: 0;
+                padding-bottom: 0;
+                border-bottom: none;
+            }
 
         .block-title {
             font-weight: 700;
@@ -201,12 +215,12 @@
             overflow: hidden;
         }
 
-        .edu-logo-placeholder img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            padding: 4px;
-        }
+            .edu-logo-placeholder img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                padding: 4px;
+            }
 
         .edu-text-content {
             flex-grow: 1;
@@ -258,7 +272,17 @@
         <h1>Adnan AlShubbar</h1>
         <p>Real-Time Technical Advisor | Distributed Systems & Computer Engineer</p>
         <div class="social-links">
-            <a href="https://www.linkedin.com/in/adnanalshubbar/" target="_blank">Connect on LinkedIn</a>
+            <a href="https://www.linkedin.com/in/adnanalshubbar/" target="_blank">
+                <span>🔗</span> LinkedIn
+            </a>
+            <!-- Swap your-username with your actual GitHub username -->
+            <a href="https://github.com/AdnanAlShubbar" target="_blank">
+                <span>💻</span> GitHub
+            </a>
+            <!-- Swap your.email@example.com with your actual email address -->
+            <a href="mailto:adnan.alshubbar@gmail.com">
+                <span>✉️</span> Email
+            </a>
         </div>
     </header>
 
@@ -272,7 +296,7 @@
 
         <section id="projects">
             <h2>Key Deployments & Projects</h2>
-            
+
             <div class="block-item">
                 <div class="block-title">Drilling Analytics platform deployment in KSA</div>
                 <div class="block-meta">Baker Hughes | 2024</div>
@@ -294,11 +318,12 @@
 
         <section id="experience">
             <h2>Professional Experience</h2>
-            
+
             <div class="block-item">
                 <div class="edu-item-container">
                     <div class="edu-logo-placeholder">
-                        💼
+                        <!-- Swap with your logo image tag when ready: 💼-->
+                        <img src="BakerHughes.png" alt="Baker Hughes Logo"> 
                     </div>
                     <div class="edu-text-content">
                         <div class="block-title">Real-Time Technical Advisor</div>
@@ -312,7 +337,9 @@
             <div class="block-item">
                 <div class="edu-item-container">
                     <div class="edu-logo-placeholder">
-                        💼
+                        <!-- Swap with your logo image tag when ready: 💼-->
+                        <img src="petrolink.png" alt="Petrolink Logo">
+
                     </div>
                     <div class="edu-text-content">
                         <div class="block-title">RTOC Support Team Leader</div>
@@ -326,6 +353,8 @@
             <div class="block-item">
                 <div class="edu-item-container">
                     <div class="edu-logo-placeholder">
+                        <!-- Swap with your logo image tag when ready: -->
+                        <!--<img src="path-to-mena-logo.png" alt="MENA Business Services Logo"> -->
                         💼
                     </div>
                     <div class="edu-text-content">
@@ -340,7 +369,9 @@
             <div class="block-item">
                 <div class="edu-item-container">
                     <div class="edu-logo-placeholder">
-                        💼
+                        <!-- Swap with your logo image tag when ready: 💼 -->
+                        <img src="aramco.webp" alt="Saudi Aramco Logo">
+
                     </div>
                     <div class="edu-text-content">
                         <div class="block-title">Information Protection Division COOP Trainee</div>
@@ -369,11 +400,13 @@
 
         <section id="education">
             <h2>Education</h2>
-            
+
             <div class="block-item">
                 <div class="edu-item-container">
                     <div class="edu-logo-placeholder">
-                        🎓
+                        <!-- Swap with your logo image tag when ready: 🎓-->
+                        <img src="kent.png" alt="University of Kent Logo">
+
                     </div>
                     <div class="edu-text-content">
                         <div class="block-title">MSc in Distributed Systems and Networks</div>
@@ -387,7 +420,9 @@
             <div class="block-item">
                 <div class="edu-item-container">
                     <div class="edu-logo-placeholder">
-                        🎓
+                        <!-- Swap with your logo image tag when ready: 🎓-->
+                        <img src="kfupm.svg" alt="KFUPM Logo"> 
+
                     </div>
                     <div class="edu-text-content">
                         <div class="block-title">BSc in Computer Engineering (3rd Honor)</div>
